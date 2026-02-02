@@ -1,13 +1,336 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>elio-wedding</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.js"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Wedding</title>
+</head>
+
+<body class="antialiased">
+  <!-- Navigation -->
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-warm-white/95 backdrop-blur-sm shadow-sm">
+    <div class="max-w-6xl mx-auto px-6 py-4">
+      <ul class="flex justify-center gap-8 text-sm font-medium tracking-wide uppercase">
+        <li><a href="#home" class="nav-link text-charcoal hover:text-gold transition-colors">Home</a></li>
+        <li><a href="#our-story" class="nav-link text-charcoal hover:text-gold transition-colors">Our Story</a></li>
+        <li><a href="#details" class="nav-link text-charcoal hover:text-gold transition-colors">Details</a></li>
+        <li><a href="#gallery" class="nav-link text-charcoal hover:text-gold transition-colors">Gallery</a></li>
+        <li><a href="#rsvp" class="nav-link text-charcoal hover:text-gold transition-colors">RSVP</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="relative min-h-screen flex items-center justify-center">
+    <div class="absolute inset-0 bg-charcoal/40 z-10"></div>
+    <img
+      src="./src/images/suit_dress_pic.jpeg"
+      alt="Couple photo"
+      class="absolute inset-0 w-full h-full object-cover"
+    />
+    <div class="relative z-20 text-center text-white px-6">
+      <p class="text-lg md:text-xl tracking-[0.3em] uppercase mb-4 font-light">We're Getting Married</p>
+      <h1 class="text-5xl md:text-7xl lg:text-8xl font-serif font-light mb-6">
+        Name & Name
+      </h1>
+      <div class="w-24 h-px bg-gold mx-auto mb-6"></div>
+      <p class="text-xl md:text-2xl font-light tracking-wide">Date TBD</p>
+      <p class="text-lg mt-2 font-light opacity-90">Location TBD</p>
+    </div>
+    <div class="absolute bottom-10 left-1/2 -translate-x-1/2 z-20 animate-bounce">
+      <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+      </svg>
+    </div>
+  </section>
+
+  <!-- Our Story Section -->
+  <section id="our-story" class="py-24 bg-champagne">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl md:text-5xl font-serif text-charcoal mb-4">Our Story</h2>
+        <p class="ornament text-gold">♥</p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-12 items-center mb-20">
+        <div class="order-2 md:order-1">
+          <h3 class="text-2xl font-serif text-charcoal mb-4">How We Met</h3>
+          <p class="text-charcoal/70 leading-relaxed">
+            Your story here... Tell guests about the first time you met, the spark that ignited,
+            and the journey that led you to this beautiful moment.
+          </p>
+        </div>
+        <div class="order-1 md:order-2">
+          <img
+            src="./src/images/beach pic.jpeg"
+            alt="Beach memory"
+            class="rounded-lg shadow-xl w-full h-80 object-cover"
+          />
+        </div>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-12 items-center mb-20">
+        <div>
+          <img
+            src="./src/images/proposal_pic.jpeg"
+            alt="The proposal"
+            class="rounded-lg shadow-xl w-full h-80 object-cover"
+          />
+        </div>
+        <div>
+          <h3 class="text-2xl font-serif text-charcoal mb-4">The Proposal</h3>
+          <p class="text-charcoal/70 leading-relaxed">
+            Share the magical moment when the question was popped.
+            Your guests would love to hear about this special memory.
+          </p>
+        </div>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6">
+        <img src="./src/images/vacation.jpeg" alt="Vacation memory" class="rounded-lg shadow-lg h-64 w-full object-cover gallery-item" />
+        <img src="./src/images/christmas.jpeg" alt="Christmas together" class="rounded-lg shadow-lg h-64 w-full object-cover gallery-item" />
+        <img src="./src/images/Figi.jpeg" alt="Travel memory" class="rounded-lg shadow-lg h-64 w-full object-cover gallery-item" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Event Details Section -->
+  <section id="details" class="py-24 bg-warm-white">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+      <h2 class="text-4xl md:text-5xl font-serif text-charcoal mb-4">Wedding Details</h2>
+      <p class="ornament text-gold mb-16">♥</p>
+
+      <div class="grid md:grid-cols-2 gap-12">
+        <!-- Ceremony -->
+        <div class="bg-champagne rounded-lg p-8 shadow-sm">
+          <div class="w-16 h-16 mx-auto mb-6 flex items-center justify-center">
+            <svg class="w-12 h-12 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+            </svg>
+          </div>
+          <h3 class="text-2xl font-serif text-charcoal mb-4">Ceremony</h3>
+          <p class="text-charcoal/70 mb-2">Date TBD</p>
+          <p class="text-charcoal/70 mb-2">Time TBD</p>
+          <p class="text-charcoal/70">Venue TBD</p>
+        </div>
+
+        <!-- Reception -->
+        <div class="bg-champagne rounded-lg p-8 shadow-sm">
+          <div class="w-16 h-16 mx-auto mb-6 flex items-center justify-center">
+            <svg class="w-12 h-12 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 15.546c-.523 0-1.046.151-1.5.454a2.704 2.704 0 01-3 0 2.704 2.704 0 00-3 0 2.704 2.704 0 01-3 0 2.704 2.704 0 00-3 0 2.704 2.704 0 01-3 0 2.701 2.701 0 00-1.5-.454M9 6v2m3-2v2m3-2v2M9 3h.01M12 3h.01M15 3h.01M21 21v-7a2 2 0 00-2-2H5a2 2 0 00-2 2v7h18zm-3-9v-2a2 2 0 00-2-2H8a2 2 0 00-2 2v2h12z"></path>
+            </svg>
+          </div>
+          <h3 class="text-2xl font-serif text-charcoal mb-4">Reception</h3>
+          <p class="text-charcoal/70 mb-2">Immediately following</p>
+          <p class="text-charcoal/70 mb-2">the ceremony</p>
+          <p class="text-charcoal/70">Venue TBD</p>
+        </div>
+      </div>
+
+      <!-- Dress Code -->
+      <div class="mt-12 bg-sage/20 rounded-lg p-8">
+        <h3 class="text-xl font-serif text-charcoal mb-2">Dress Code</h3>
+        <p class="text-charcoal/70">Formal / Semi-Formal Attire</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Photo Break -->
+  <section class="relative h-96 hero-bg" style="background-image: url('./src/images/orchard_walk.jpeg');">
+    <div class="absolute inset-0 bg-charcoal/30"></div>
+    <div class="relative z-10 h-full flex items-center justify-center">
+      <p class="text-white text-3xl md:text-4xl font-serif italic text-center px-6">
+        "Two souls, one heart"
+      </p>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section id="gallery" class="py-24 bg-warm-white">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl md:text-5xl font-serif text-charcoal mb-4">Our Gallery</h2>
+        <p class="ornament text-gold">♥</p>
+      </div>
+
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+        <div class="col-span-2 row-span-2">
+          <img src="./src/images/marine_ball5_high_quality.jpeg" alt="Marine Ball" class="rounded-lg shadow-lg w-full h-full object-cover gallery-item" />
+        </div>
+        <img src="./src/images/beach2.jpeg" alt="Beach" class="rounded-lg shadow-lg h-48 w-full object-cover gallery-item" />
+        <img src="./src/images/christmas2.jpeg" alt="Christmas" class="rounded-lg shadow-lg h-48 w-full object-cover gallery-item" />
+        <img src="./src/images/marine_ball.jpeg" alt="Marine Ball" class="rounded-lg shadow-lg h-48 w-full object-cover gallery-item" />
+        <img src="./src/images/marine_ball2.jpeg" alt="Marine Ball" class="rounded-lg shadow-lg h-48 w-full object-cover gallery-item" />
+        <img src="./src/images/vacation2.jpeg" alt="Vacation" class="rounded-lg shadow-lg h-48 w-full object-cover gallery-item" />
+        <img src="./src/images/family_pic.jpeg" alt="Family" class="rounded-lg shadow-lg h-48 w-full object-cover gallery-item" />
+        <img src="./src/images/vacation3.jpeg" alt="Vacation" class="rounded-lg shadow-lg h-48 w-full object-cover gallery-item" />
+        <img src="./src/images/christmas3.jpeg" alt="Christmas" class="rounded-lg shadow-lg h-48 w-full object-cover gallery-item" />
+        <div class="col-span-2">
+          <img src="./src/images/marine_ball6.jpeg" alt="Marine Ball" class="rounded-lg shadow-lg h-64 w-full object-cover gallery-item" />
+        </div>
+        <img src="./src/images/gender_reveal.jpeg" alt="Gender Reveal" class="rounded-lg shadow-lg h-64 w-full object-cover gallery-item" />
+        <img src="./src/images/pregnancy_photo.jpeg" alt="Pregnancy" class="rounded-lg shadow-lg h-64 w-full object-cover gallery-item" />
+        <img src="./src/images/marine_ball3.jpeg" alt="Marine Ball" class="rounded-lg shadow-lg h-48 w-full object-cover gallery-item" />
+        <img src="./src/images/marine_ball4.jpeg" alt="Marine Ball" class="rounded-lg shadow-lg h-48 w-full object-cover gallery-item" />
+        <img src="./src/images/sister sweet 15.jpeg" alt="Sweet 15" class="rounded-lg shadow-lg h-48 w-full object-cover gallery-item" />
+        <img src="./src/images/marine_ball_6.jpeg" alt="Marine Ball" class="rounded-lg shadow-lg h-48 w-full object-cover gallery-item" />
+      </div>
+    </div>
+  </section>
+
+  <!-- RSVP Section -->
+  <section id="rsvp" class="py-24 bg-champagne">
+    <div class="max-w-2xl mx-auto px-6 text-center">
+      <h2 class="text-4xl md:text-5xl font-serif text-charcoal mb-4">RSVP</h2>
+      <p class="ornament text-gold mb-8">♥</p>
+      <p class="text-charcoal/70 mb-12">
+        Please let us know if you'll be joining us on our special day.
+      </p>
+
+      <form class="space-y-6 text-left">
+        <div>
+          <label class="block text-sm font-medium text-charcoal mb-2">Full Name</label>
+          <input
+            type="text"
+            class="w-full px-4 py-3 border border-charcoal/20 rounded-lg focus:outline-none focus:border-gold bg-white"
+            placeholder="Your name"
+          />
+        </div>
+        <div>
+          <label class="block text-sm font-medium text-charcoal mb-2">Email</label>
+          <input
+            type="email"
+            class="w-full px-4 py-3 border border-charcoal/20 rounded-lg focus:outline-none focus:border-gold bg-white"
+            placeholder="your@email.com"
+          />
+        </div>
+        <div>
+          <label class="block text-sm font-medium text-charcoal mb-2">Will you attend?</label>
+          <select class="w-full px-4 py-3 border border-charcoal/20 rounded-lg focus:outline-none focus:border-gold bg-white">
+            <option>Joyfully Accept</option>
+            <option>Regretfully Decline</option>
+          </select>
+        </div>
+        <div>
+          <label class="block text-sm font-medium text-charcoal mb-2">Number of Guests</label>
+          <select class="w-full px-4 py-3 border border-charcoal/20 rounded-lg focus:outline-none focus:border-gold bg-white">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+          </select>
+        </div>
+        <div>
+          <label class="block text-sm font-medium text-charcoal mb-2">Dietary Restrictions</label>
+          <textarea
+            class="w-full px-4 py-3 border border-charcoal/20 rounded-lg focus:outline-none focus:border-gold bg-white h-24"
+            placeholder="Any dietary restrictions or allergies..."
+          ></textarea>
+        </div>
+        <button
+          type="submit"
+          class="w-full py-4 bg-gold hover:bg-gold-dark text-white font-medium tracking-wide uppercase rounded-lg transition-colors"
+        >
+          Send RSVP
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Gift Registry Section -->
+  <section class="py-24 bg-warm-white">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+      <h2 class="text-4xl md:text-5xl font-serif text-charcoal mb-4">Gift Registry</h2>
+      <p class="ornament text-gold mb-8">♥</p>
+      <p class="text-charcoal/70 mb-12 max-w-2xl mx-auto">
+        Your presence at our wedding is the greatest gift of all. However, if you wish to honor us with a gift,
+        we have registered at the following stores.
+      </p>
+
+      <div class="grid md:grid-cols-3 gap-6">
+        <a href="#" class="block bg-champagne rounded-lg p-8 hover:shadow-lg transition-shadow">
+          <p class="text-xl font-serif text-charcoal">Store A</p>
+          <p class="text-sm text-charcoal/50 mt-2">View Registry</p>
+        </a>
+        <a href="#" class="block bg-champagne rounded-lg p-8 hover:shadow-lg transition-shadow">
+          <p class="text-xl font-serif text-charcoal">Store B</p>
+          <p class="text-sm text-charcoal/50 mt-2">View Registry</p>
+        </a>
+        <a href="#" class="block bg-champagne rounded-lg p-8 hover:shadow-lg transition-shadow">
+          <p class="text-xl font-serif text-charcoal">Store C</p>
+          <p class="text-sm text-charcoal/50 mt-2">View Registry</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Q&A Section -->
+  <section class="py-24 bg-champagne">
+    <div class="max-w-3xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl md:text-5xl font-serif text-charcoal mb-4">Questions?</h2>
+        <p class="ornament text-gold">♥</p>
+      </div>
+
+      <div class="space-y-6">
+        <details class="bg-white rounded-lg shadow-sm">
+          <summary class="px-6 py-4 cursor-pointer font-medium text-charcoal hover:text-gold transition-colors">
+            What time should I arrive?
+          </summary>
+          <div class="px-6 pb-4 text-charcoal/70">
+            Please arrive 30 minutes before the ceremony begins.
+          </div>
+        </details>
+
+        <details class="bg-white rounded-lg shadow-sm">
+          <summary class="px-6 py-4 cursor-pointer font-medium text-charcoal hover:text-gold transition-colors">
+            Is there parking available?
+          </summary>
+          <div class="px-6 pb-4 text-charcoal/70">
+            Yes, complimentary parking will be available at the venue.
+          </div>
+        </details>
+
+        <details class="bg-white rounded-lg shadow-sm">
+          <summary class="px-6 py-4 cursor-pointer font-medium text-charcoal hover:text-gold transition-colors">
+            Can I bring a plus one?
+          </summary>
+          <div class="px-6 pb-4 text-charcoal/70">
+            Please refer to your invitation for details about plus ones.
+          </div>
+        </details>
+
+        <details class="bg-white rounded-lg shadow-sm">
+          <summary class="px-6 py-4 cursor-pointer font-medium text-charcoal hover:text-gold transition-colors">
+            Are children welcome?
+          </summary>
+          <div class="px-6 pb-4 text-charcoal/70">
+            We love your little ones! Children are welcome at our celebration.
+          </div>
+        </details>
+      </div>
+
+      <div class="text-center mt-12">
+        <p class="text-charcoal/70">Still have questions?</p>
+        <a href="mailto:email@example.com" class="text-gold hover:text-gold-dark font-medium">Contact Us</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-12 bg-charcoal text-white">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+      <h2 class="text-3xl font-serif mb-4">Name & Name</h2>
+      <p class="text-white/60 mb-6">Date TBD</p>
+      <div class="w-16 h-px bg-gold mx-auto mb-6"></div>
+      <p class="text-white/40 text-sm">Made with love</p>
+    </div>
+  </footer>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+
 </html>
