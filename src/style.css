@@ -7,12 +7,12 @@
 @theme {
   --font-serif: 'Cormorant Garamond', Georgia, serif;
   --font-sans: 'Montserrat', system-ui, sans-serif;
-  --color-cream: #FAF9F6;
-  --color-linen: #F5F3EF;
+  --color-black: #0A0A0A;
+  --color-dark: #141414;
+  --color-darker: #1A1A1A;
   --color-sage: #7D9B6A;
   --color-sage-dark: #5C7A4D;
-  --color-charcoal: #2C2C2C;
-  --color-warm-white: #FDFCFA;
+  --color-sage-light: #9BB88A;
 }
 
 /* Base styles */
@@ -22,8 +22,8 @@ html {
 
 body {
   font-family: var(--font-sans);
-  color: var(--color-charcoal);
-  background-color: var(--color-warm-white);
+  color: #ffffff;
+  background-color: var(--color-black);
 }
 
 /* Typography */
