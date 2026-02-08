@@ -43,6 +43,28 @@ h1, h2, h3, h4, h5, h6 {
   transform: translateY(0);
 }
 
+/* Fallback: ensure content visible if animation doesn't trigger */
+@media (prefers-reduced-motion: reduce) {
+  .fade-in {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Safari fallback - content visible by default via noscript or delayed JS */
+@supports (-webkit-touch-callout: none) {
+  .fade-in:not(.fade-in-visible) {
+    animation: safariReveal 0s 2s forwards;
+  }
+
+  @keyframes safariReveal {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
 /* Hero parallax effect */
 .hero-bg {
   background-attachment: fixed;

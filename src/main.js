@@ -47,20 +47,35 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 })
 
 // Fade in elements on scroll
-const observerOptions = {
-  threshold: 0.1,
-  rootMargin: '0px 0px -50px 0px'
-}
+if ('IntersectionObserver' in window) {
+  const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+  }
 
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('fade-in-visible')
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('fade-in-visible')
+      }
+    })
+  }, observerOptions)
+
+  document.querySelectorAll('section').forEach(section => {
+    section.classList.add('fade-in')
+    observer.observe(section)
+
+    // Fallback: if section is already in viewport, show it immediately
+    const rect = section.getBoundingClientRect()
+    if (rect.top < window.innerHeight && rect.bottom > 0) {
+      section.classList.add('fade-in-visible')
     }
   })
-}, observerOptions)
 
-document.querySelectorAll('section').forEach(section => {
-  section.classList.add('fade-in')
-  observer.observe(section)
-})
+  // Safety fallback: ensure all content is visible after 2 seconds
+  setTimeout(() => {
+    document.querySelectorAll('.fade-in').forEach(el => {
+      el.classList.add('fade-in-visible')
+    })
+  }, 2000)
+}
