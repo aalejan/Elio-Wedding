@@ -7,10 +7,10 @@
 @theme {
   --font-serif: 'Cormorant Garamond', Georgia, serif;
   --font-sans: 'Montserrat', system-ui, sans-serif;
-  --color-champagne: #F7F3E9;
-  --color-gold: #C9A959;
-  --color-gold-dark: #A68B3D;
-  --color-sage: #9CAF88;
+  --color-cream: #FAF9F6;
+  --color-linen: #F5F3EF;
+  --color-sage: #7D9B6A;
+  --color-sage-dark: #5C7A4D;
   --color-charcoal: #2C2C2C;
   --color-warm-white: #FDFCFA;
 }
@@ -90,7 +90,7 @@ h1, h2, h3, h4, h5, h6 {
   display: inline-block;
   width: 60px;
   height: 1px;
-  background: var(--color-gold);
+  background: var(--color-sage);
   vertical-align: middle;
   margin: 0 15px;
 }
@@ -107,7 +107,7 @@ h1, h2, h3, h4, h5, h6 {
   left: 50%;
   width: 0;
   height: 1px;
-  background: var(--color-gold);
+  background: var(--color-sage);
   transition: all 0.3s ease;
   transform: translateX(-50%);
 }
