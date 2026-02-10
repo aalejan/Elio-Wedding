@@ -1,5 +1,47 @@
 import './style.css'
 
+// Video modal
+const openVideoBtn = document.getElementById('open-video-modal')
+const closeVideoBtn = document.getElementById('close-video-modal')
+const videoModal = document.getElementById('video-modal')
+const proposalVideo = document.getElementById('proposal-video')
+
+if (openVideoBtn && videoModal) {
+  openVideoBtn.addEventListener('click', () => {
+    videoModal.classList.remove('hidden')
+    videoModal.classList.add('flex')
+    document.body.style.overflow = 'hidden'
+    if (proposalVideo) proposalVideo.play()
+  })
+
+  closeVideoBtn.addEventListener('click', () => {
+    videoModal.classList.add('hidden')
+    videoModal.classList.remove('flex')
+    document.body.style.overflow = ''
+    if (proposalVideo) proposalVideo.pause()
+  })
+
+  // Close on backdrop click
+  videoModal.addEventListener('click', (e) => {
+    if (e.target === videoModal) {
+      videoModal.classList.add('hidden')
+      videoModal.classList.remove('flex')
+      document.body.style.overflow = ''
+      if (proposalVideo) proposalVideo.pause()
+    }
+  })
+
+  // Close on escape key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && !videoModal.classList.contains('hidden')) {
+      videoModal.classList.add('hidden')
+      videoModal.classList.remove('flex')
+      document.body.style.overflow = ''
+      if (proposalVideo) proposalVideo.pause()
+    }
+  })
+}
+
 // Mobile menu toggle
 const mobileMenuBtn = document.getElementById('mobile-menu-btn')
 const mobileMenu = document.getElementById('mobile-menu')

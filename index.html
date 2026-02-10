@@ -183,7 +183,7 @@
       </div>
 
       <!-- Chapter 6: The Proposal -->
-      <div class="grid md:grid-cols-2 gap-6 sm:gap-12 items-center mb-12 sm:mb-20">
+      <div class="grid md:grid-cols-2 gap-6 sm:gap-12 items-center mb-8 sm:mb-12">
         <div>
           <img src="./src/images/proposal_pic.jpeg" alt="The proposal at La Jolla Cove"
             class="rounded-lg shadow-xl w-full ring-1 ring-sage/20" />
@@ -199,6 +199,17 @@
             "I do."
           </p>
         </div>
+      </div>
+
+      <!-- Proposal Video Button -->
+      <div class="mb-12 sm:mb-20 text-center">
+        <button id="open-video-modal"
+          class="inline-flex items-center gap-3 px-6 py-3 bg-sage/20 hover:bg-sage/30 border border-sage/50 rounded-full transition-all group">
+          <svg class="w-5 h-5 text-sage group-hover:scale-110 transition-transform" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M8 5v14l11-7z"/>
+          </svg>
+          <span class="text-sage-light font-serif italic text-sm sm:text-base">Watch the moment she said yes</span>
+        </button>
       </div>
 
       <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6">
@@ -607,6 +618,24 @@
       <p class="text-white/40 text-xs sm:text-sm">Made with love</p>
     </div>
   </footer>
+
+  <!-- Video Modal -->
+  <div id="video-modal" class="fixed inset-0 z-[100] hidden items-center justify-center bg-black/90 backdrop-blur-sm p-4">
+    <div class="relative w-full max-w-2xl">
+      <button id="close-video-modal"
+        class="absolute -top-12 right-0 text-white/70 hover:text-white transition-colors">
+        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+      <div class="rounded-xl overflow-hidden shadow-2xl ring-2 ring-sage/30">
+        <video id="proposal-video" class="w-full" controls preload="metadata">
+          <source src="./src/images/IMG_2404.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </div>
+  </div>
 
   <script type="module" src="/src/main.js"></script>
 </body>
