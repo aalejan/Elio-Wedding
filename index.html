@@ -23,28 +23,49 @@
         </button>
       </div>
       <!-- Desktop menu -->
-      <ul class="hidden md:flex justify-center gap-8 text-sm font-medium tracking-wide uppercase">
-        <li><a href="#home" class="nav-link text-white hover:text-sage transition-colors">Home</a></li>
-        <li><a href="#our-story" class="nav-link text-white hover:text-sage transition-colors">Our Story</a></li>
-        <li><a href="#details" class="nav-link text-white hover:text-sage transition-colors">Details</a></li>
-        <li><a href="#gallery" class="nav-link text-white hover:text-sage transition-colors">Gallery</a></li>
-        <li><a href="#rsvp" class="nav-link text-white hover:text-sage transition-colors">RSVP</a></li>
-        <li><a href="#gifts" class="nav-link text-white hover:text-sage transition-colors">Gifts</a></li>
-        <li><a href="#faq" class="nav-link text-white hover:text-sage transition-colors">Q&A</a></li>
-      </ul>
+      <div class="hidden md:flex items-center justify-between">
+        <ul class="flex justify-center gap-8 text-sm font-medium tracking-wide uppercase flex-1">
+          <li><a href="#home" class="nav-link text-white hover:text-sage transition-colors"
+              data-i18n="nav.home">Home</a></li>
+          <li><a href="#our-story" class="nav-link text-white hover:text-sage transition-colors"
+              data-i18n="nav.story">Our Story</a></li>
+          <li><a href="#details" class="nav-link text-white hover:text-sage transition-colors"
+              data-i18n="nav.details">Details</a></li>
+          <li><a href="#gallery" class="nav-link text-white hover:text-sage transition-colors"
+              data-i18n="nav.gallery">Gallery</a></li>
+          <li><a href="#rsvp" class="nav-link text-white hover:text-sage transition-colors">RSVP</a></li>
+          <li><a href="#gifts" class="nav-link text-white hover:text-sage transition-colors"
+              data-i18n="nav.gifts">Gifts</a></li>
+          <li><a href="#faq" class="nav-link text-white hover:text-sage transition-colors" data-i18n="nav.faq">Q&A</a>
+          </li>
+        </ul>
+        <button id="lang-toggle"
+          class="ml-6 px-4 py-2 text-sm font-medium border-2 border-sage rounded-full text-white bg-sage/20 hover:bg-sage/40 transition-colors">
+          Português
+        </button>
+      </div>
       <!-- Mobile menu -->
       <ul id="mobile-menu"
         class="hidden flex-col gap-4 pt-4 pb-2 text-sm font-medium tracking-wide uppercase md:hidden">
-        <li><a href="#home" class="nav-link block text-white hover:text-sage transition-colors py-2">Home</a></li>
-        <li><a href="#our-story" class="nav-link block text-white hover:text-sage transition-colors py-2">Our
-            Story</a></li>
-        <li><a href="#details" class="nav-link block text-white hover:text-sage transition-colors py-2">Details</a>
-        </li>
-        <li><a href="#gallery" class="nav-link block text-white hover:text-sage transition-colors py-2">Gallery</a>
-        </li>
+        <li><a href="#home" class="nav-link block text-white hover:text-sage transition-colors py-2"
+            data-i18n="nav.home">Home</a></li>
+        <li><a href="#our-story" class="nav-link block text-white hover:text-sage transition-colors py-2"
+            data-i18n="nav.story">Our Story</a></li>
+        <li><a href="#details" class="nav-link block text-white hover:text-sage transition-colors py-2"
+            data-i18n="nav.details">Details</a></li>
+        <li><a href="#gallery" class="nav-link block text-white hover:text-sage transition-colors py-2"
+            data-i18n="nav.gallery">Gallery</a></li>
         <li><a href="#rsvp" class="nav-link block text-white hover:text-sage transition-colors py-2">RSVP</a></li>
-        <li><a href="#gifts" class="nav-link block text-white hover:text-sage transition-colors py-2">Gifts</a></li>
-        <li><a href="#faq" class="nav-link block text-white hover:text-sage transition-colors py-2">Q&A</a></li>
+        <li><a href="#gifts" class="nav-link block text-white hover:text-sage transition-colors py-2"
+            data-i18n="nav.gifts">Gifts</a></li>
+        <li><a href="#faq" class="nav-link block text-white hover:text-sage transition-colors py-2"
+            data-i18n="nav.faq">Q&A</a></li>
+        <li class="pt-2 border-t border-white/10">
+          <button id="lang-toggle-mobile"
+            class="px-4 py-2 text-sm font-medium border-2 border-sage rounded-full text-white bg-sage/20 hover:bg-sage/40 transition-colors">
+            Português
+          </button>
+        </li>
       </ul>
     </div>
   </nav>
@@ -55,7 +76,8 @@
     <img src="./src/images/suit_dress_pic.jpeg" alt="Elio and Juscelia"
       class="absolute inset-0 w-full h-full object-cover object-center" />
     <div class="relative z-20 text-center text-white px-4 sm:px-6">
-      <p class="text-sm sm:text-lg md:text-xl tracking-[0.2em] sm:tracking-[0.3em] uppercase mb-3 sm:mb-4 font-light">
+      <p class="text-sm sm:text-lg md:text-xl tracking-[0.2em] sm:tracking-[0.3em] uppercase mb-3 sm:mb-4 font-light"
+        data-i18n="hero.tagline">
         We're Getting Married</p>
       <h1 class="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-serif font-light mb-4 sm:mb-6">
         Elio & Juscelia
@@ -75,14 +97,15 @@
   <section id="our-story" class="py-16 sm:py-24 bg-dark">
     <div class="max-w-6xl mx-auto px-4 sm:px-6">
       <div class="text-center mb-10 sm:mb-16">
-        <h2 class="text-3xl sm:text-4xl md:text-5xl font-serif text-white mb-4">Our Story</h2>
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-serif text-white mb-4" data-i18n="story.title">Our Story</h2>
         <p class="ornament text-sage">♥</p>
       </div>
 
       <!-- Chapter 1: The Puppies -->
       <div class="grid md:grid-cols-2 gap-6 sm:gap-12 items-center mb-12 sm:mb-20">
         <div class="order-2 md:order-1">
-          <h3 class="text-xl sm:text-2xl font-serif text-white mb-3 sm:mb-4">It Started with Puppies</h3>
+          <h3 class="text-xl sm:text-2xl font-serif text-white mb-3 sm:mb-4" data-i18n="story.ch1.title">It Started with
+            Puppies</h3>
           <p class="text-white/70 leading-relaxed mb-4">
             Juscelia was working like any other day when she came across a Snapchat post advertising Golden Retriever
             puppies for sale. Her sister, Cimeia, and close friend, Bruna, had been wanting a dog for quite some time.
@@ -108,7 +131,8 @@
             class="rounded-lg shadow-xl w-full ring-1 ring-sage/20" />
         </div>
         <div>
-          <h3 class="text-xl sm:text-2xl font-serif text-white mb-3 sm:mb-4">Three Signs</h3>
+          <h3 class="text-xl sm:text-2xl font-serif text-white mb-3 sm:mb-4" data-i18n="story.ch2.title">Three Signs
+          </h3>
           <p class="text-white/70 leading-relaxed mb-4">
             Not long after, when Cimeia saw Bruna's puppy, she decided she wanted one too. Busy with work, Juscelia
             asked her friend Viviana to call on their behalf. Viviana and Elio spoke briefly about the dog, and shortly
@@ -125,7 +149,8 @@
       <!-- Chapter 3: First Meeting -->
       <div class="grid md:grid-cols-2 gap-6 sm:gap-12 items-center mb-12 sm:mb-20">
         <div class="order-2 md:order-1">
-          <h3 class="text-xl sm:text-2xl font-serif text-white mb-3 sm:mb-4">The First Meeting</h3>
+          <h3 class="text-xl sm:text-2xl font-serif text-white mb-3 sm:mb-4" data-i18n="story.ch3.title">The First
+            Meeting</h3>
           <p class="text-white/70 leading-relaxed mb-4 text-sm sm:text-base">
             Seeing Juscelia for the first time, Elio was immediately taken and tried to strike up a conversation.
             Despite several attempts, all he received were polite nods and a quiet "thank you" for the dog. Elio assumed
@@ -148,7 +173,8 @@
             class="rounded-lg shadow-xl w-full ring-1 ring-sage/20" />
         </div>
         <div>
-          <h3 class="text-xl sm:text-2xl font-serif text-white mb-3 sm:mb-4">A Connection Grows</h3>
+          <h3 class="text-xl sm:text-2xl font-serif text-white mb-3 sm:mb-4" data-i18n="story.ch4.title">A Connection
+            Grows</h3>
           <p class="text-white/70 leading-relaxed mb-4 text-sm sm:text-base">
             About a week later, Juscelia began sending update photos of the puppies. Over the course of four months,
             conversations about the dogs slowly turned into casual chats, casual chats grew into genuine connection, and
@@ -165,7 +191,8 @@
       <!-- Chapter 5: Long Distance -->
       <div class="grid md:grid-cols-2 gap-6 sm:gap-12 items-center mb-12 sm:mb-20">
         <div class="order-2 md:order-1">
-          <h3 class="text-xl sm:text-2xl font-serif text-white mb-3 sm:mb-4">600 Miles Apart</h3>
+          <h3 class="text-xl sm:text-2xl font-serif text-white mb-3 sm:mb-4" data-i18n="story.ch5.title">600 Miles Apart
+          </h3>
           <p class="text-white/70 leading-relaxed mb-4 text-sm sm:text-base">
             Trip after trip followed, with Juscelia traveling to Virginia and Elio traveling to Massachusetts. Within
             months, they planned a trip to Puerto Rico to ring in the New Year together.
@@ -189,7 +216,8 @@
             class="rounded-lg shadow-xl w-full ring-1 ring-sage/20" />
         </div>
         <div>
-          <h3 class="text-xl sm:text-2xl font-serif text-white mb-3 sm:mb-4">The Proposal</h3>
+          <h3 class="text-xl sm:text-2xl font-serif text-white mb-3 sm:mb-4" data-i18n="story.ch6.title">The Proposal
+          </h3>
           <p class="text-white/70 leading-relaxed mb-4 text-sm sm:text-base">
             On April 16, 2024, Elio proposed to Juscelia in San Diego, California, overlooking the breathtaking ocean
             cliffs at La Jolla Cove.
@@ -205,12 +233,14 @@
       <div class="mb-12 sm:mb-20 text-center">
         <button id="open-video-modal"
           class="inline-flex items-center gap-4 px-8 sm:px-10 py-5 sm:py-6 bg-sage/20 hover:bg-sage/30 border-2 border-sage rounded-full transition-all group shadow-lg hover:shadow-sage/20">
-          <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-sage/30 flex items-center justify-center group-hover:bg-sage/50 transition-colors">
+          <div
+            class="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-sage/30 flex items-center justify-center group-hover:bg-sage/50 transition-colors">
             <svg class="w-6 h-6 sm:w-7 sm:h-7 text-white ml-1" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M8 5v14l11-7z"/>
+              <path d="M8 5v14l11-7z" />
             </svg>
           </div>
-          <span class="text-white font-serif text-lg sm:text-xl">Watch the moment she said yes</span>
+          <span class="text-white font-serif text-lg sm:text-xl" data-i18n="story.video">Watch the moment she said
+            yes</span>
         </button>
       </div>
 
@@ -226,7 +256,8 @@
   <!-- Event Details Section -->
   <section id="details" class="py-16 sm:py-24 bg-black">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center">
-      <h2 class="text-3xl sm:text-4xl md:text-5xl font-serif text-white mb-4">Wedding Details</h2>
+      <h2 class="text-3xl sm:text-4xl md:text-5xl font-serif text-white mb-4" data-i18n="details.title">Wedding Details
+      </h2>
       <p class="ornament text-sage mb-10 sm:mb-16">♥</p>
 
       <!-- Venue Info -->
@@ -246,9 +277,10 @@
               </path>
             </svg>
           </div>
-          <h3 class="text-xl sm:text-2xl font-serif text-white mb-3 sm:mb-4">Ceremony</h3>
+          <h3 class="text-xl sm:text-2xl font-serif text-white mb-3 sm:mb-4" data-i18n="details.ceremony">Ceremony</h3>
           <p class="text-white/70 mb-2">4:30 PM</p>
-          <p class="text-white/60 text-xs sm:text-sm italic">Please be seated by 5:00 PM</p>
+          <p class="text-white/60 text-xs sm:text-sm italic" data-i18n="details.ceremony.note">Please be seated by 5:00
+            PM</p>
         </div>
 
         <!-- Cocktail Hour -->
@@ -260,9 +292,11 @@
               </path>
             </svg>
           </div>
-          <h3 class="text-xl sm:text-2xl font-serif text-white mb-3 sm:mb-4">Cocktail Hour</h3>
+          <h3 class="text-xl sm:text-2xl font-serif text-white mb-3 sm:mb-4" data-i18n="details.cocktail">Cocktail Hour
+          </h3>
           <p class="text-white/70 mb-2">6:00 PM</p>
-          <p class="text-white/60 text-xs sm:text-sm italic">Drinks & hors d'oeuvres</p>
+          <p class="text-white/60 text-xs sm:text-sm italic" data-i18n="details.cocktail.note">Drinks & hors d'oeuvres
+          </p>
         </div>
 
         <!-- Reception -->
@@ -274,16 +308,19 @@
               </path>
             </svg>
           </div>
-          <h3 class="text-xl sm:text-2xl font-serif text-white mb-3 sm:mb-4">Reception</h3>
+          <h3 class="text-xl sm:text-2xl font-serif text-white mb-3 sm:mb-4" data-i18n="details.reception">Reception
+          </h3>
           <p class="text-white/70 mb-2">7:00 PM</p>
-          <p class="text-white/60 text-xs sm:text-sm italic">Dinner, dancing & celebration</p>
+          <p class="text-white/60 text-xs sm:text-sm italic" data-i18n="details.reception.note">Dinner, dancing &
+            celebration</p>
         </div>
       </div>
 
       <!-- Dress Code -->
       <div class="mt-8 sm:mt-12 bg-sage/20 rounded-lg p-6 sm:p-8 border border-sage/30">
-        <h3 class="text-lg sm:text-xl font-serif text-white mb-2">Dress Code</h3>
-        <p class="text-white/70 text-sm sm:text-base">Black Formal / Cocktail Attire</p>
+        <h3 class="text-lg sm:text-xl font-serif text-white mb-2" data-i18n="details.dresscode">Dress Code</h3>
+        <p class="text-white/70 text-sm sm:text-base" data-i18n="details.dresscode.text">Black Formal / Cocktail Attire
+        </p>
       </div>
     </div>
   </section>
@@ -292,7 +329,8 @@
   <section class="relative h-64 sm:h-96 hero-bg" style="background-image: url('./src/images/orchard_walk.jpeg');">
     <div class="absolute inset-0 bg-black/40"></div>
     <div class="relative z-10 h-full flex items-center justify-center">
-      <p class="text-sage-light text-2xl sm:text-3xl md:text-4xl font-serif italic text-center px-4 sm:px-6">
+      <p class="text-sage-light text-2xl sm:text-3xl md:text-4xl font-serif italic text-center px-4 sm:px-6"
+        data-i18n="quote">
         "Two souls, one heart"
       </p>
     </div>
@@ -302,7 +340,8 @@
   <section id="gallery" class="py-16 sm:py-24 bg-black">
     <div class="max-w-6xl mx-auto px-4 sm:px-6">
       <div class="text-center mb-10 sm:mb-16">
-        <h2 class="text-3xl sm:text-4xl md:text-5xl font-serif text-white mb-4">Our Gallery</h2>
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-serif text-white mb-4" data-i18n="gallery.title">Our Gallery
+        </h2>
         <p class="ornament text-sage">♥</p>
       </div>
 
@@ -336,33 +375,33 @@
     <div class="max-w-2xl mx-auto px-4 sm:px-6 text-center">
       <h2 class="text-3xl sm:text-4xl md:text-5xl font-serif text-white mb-4">RSVP</h2>
       <p class="ornament text-sage mb-6 sm:mb-8">♥</p>
-      <p class="text-white/70 mb-8 sm:mb-12 text-sm sm:text-base">
+      <p class="text-white/70 mb-8 sm:mb-12 text-sm sm:text-base" data-i18n="rsvp.intro">
         Please let us know if you'll be joining us on our special day.
       </p>
 
       <form class="space-y-6 text-left">
         <div>
-          <label class="block text-sm font-medium text-white mb-2">Full Name</label>
+          <label class="block text-sm font-medium text-white mb-2" data-i18n="rsvp.name">Full Name</label>
           <input type="text"
             class="w-full px-4 py-3 border border-sage/30 rounded-lg focus:outline-none focus:border-sage focus:ring-1 focus:ring-sage/50 bg-darker text-white placeholder:text-white/50"
-            placeholder="Your name" />
+            placeholder="Your name" data-i18n-placeholder="rsvp.name.placeholder" />
         </div>
         <div>
-          <label class="block text-sm font-medium text-white mb-2">Email</label>
+          <label class="block text-sm font-medium text-white mb-2" data-i18n="rsvp.email">Email</label>
           <input type="email"
             class="w-full px-4 py-3 border border-sage/30 rounded-lg focus:outline-none focus:border-sage focus:ring-1 focus:ring-sage/50 bg-darker text-white placeholder:text-white/50"
             placeholder="your@email.com" />
         </div>
         <div>
-          <label class="block text-sm font-medium text-white mb-2">Will you attend?</label>
+          <label class="block text-sm font-medium text-white mb-2" data-i18n="rsvp.attend">Will you attend?</label>
           <select
             class="w-full px-4 py-3 border border-sage/30 rounded-lg focus:outline-none focus:border-sage focus:ring-1 focus:ring-sage/50 bg-darker text-white placeholder:text-white/50">
-            <option>Joyfully Accept</option>
-            <option>Regretfully Decline</option>
+            <option data-i18n="rsvp.accept">Joyfully Accept</option>
+            <option data-i18n="rsvp.decline">Regretfully Decline</option>
           </select>
         </div>
         <div>
-          <label class="block text-sm font-medium text-white mb-2">Number of Guests</label>
+          <label class="block text-sm font-medium text-white mb-2" data-i18n="rsvp.guests">Number of Guests</label>
           <select
             class="w-full px-4 py-3 border border-sage/30 rounded-lg focus:outline-none focus:border-sage focus:ring-1 focus:ring-sage/50 bg-darker text-white placeholder:text-white/50">
             <option>1</option>
@@ -372,13 +411,15 @@
           </select>
         </div>
         <div>
-          <label class="block text-sm font-medium text-white mb-2">Dietary Restrictions</label>
+          <label class="block text-sm font-medium text-white mb-2" data-i18n="rsvp.dietary">Dietary Restrictions</label>
           <textarea
             class="w-full px-4 py-3 border border-sage/30 rounded-lg focus:outline-none focus:border-sage focus:ring-1 focus:ring-sage/50 bg-darker text-white placeholder:text-white/50 h-24"
-            placeholder="Any dietary restrictions or allergies..."></textarea>
+            placeholder="Any dietary restrictions or allergies..."
+            data-i18n-placeholder="rsvp.dietary.placeholder"></textarea>
         </div>
         <button type="submit"
-          class="w-full py-4 bg-sage hover:bg-sage-dark text-white font-medium tracking-wide uppercase rounded-lg transition-colors">
+          class="w-full py-4 bg-sage hover:bg-sage-dark text-white font-medium tracking-wide uppercase rounded-lg transition-colors"
+          data-i18n="rsvp.submit">
           Send RSVP
         </button>
       </form>
@@ -388,9 +429,9 @@
   <!-- Gift Registry Section -->
   <section id="gifts" class="py-16 sm:py-24 bg-black">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center">
-      <h2 class="text-3xl sm:text-4xl md:text-5xl font-serif text-white mb-4">Gifts</h2>
+      <h2 class="text-3xl sm:text-4xl md:text-5xl font-serif text-white mb-4" data-i18n="gifts.title">Gifts</h2>
       <p class="ornament text-sage mb-6 sm:mb-8">♥</p>
-      <p class="text-white/70 mb-8 sm:mb-12 max-w-2xl mx-auto text-sm sm:text-base">
+      <p class="text-white/70 mb-8 sm:mb-12 max-w-2xl mx-auto text-sm sm:text-base" data-i18n="gifts.intro">
         Your presence at our wedding is truly the greatest gift to us. For those who wish to contribute in another way,
         we would be sincerely grateful for any support toward our honeymoon. These contributions will help us create
         lasting memories as we begin this next chapter together.
@@ -404,11 +445,11 @@
             </path>
           </svg>
         </div>
-        <p class="text-lg sm:text-xl font-serif text-white">Honeymoon Fund</p>
-        <p class="text-sm text-white/50 mt-2">Help us make memories</p>
+        <p class="text-lg sm:text-xl font-serif text-white" data-i18n="gifts.honeymoon">Honeymoon Fund</p>
+        <p class="text-sm text-white/50 mt-2" data-i18n="gifts.honeymoon.sub">Help us make memories</p>
       </div>
 
-      <p class="text-white/60 text-sm mt-8">
+      <p class="text-white/60 text-sm mt-8" data-i18n="gifts.note">
         Gifts are also welcome at the venue on the day of the wedding.
       </p>
     </div>
@@ -418,29 +459,31 @@
   <section id="faq" class="py-16 sm:py-24 bg-dark">
     <div class="max-w-3xl mx-auto px-4 sm:px-6">
       <div class="text-center mb-10 sm:mb-16">
-        <h2 class="text-3xl sm:text-4xl md:text-5xl font-serif text-white mb-4">Questions?</h2>
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-serif text-white mb-4" data-i18n="faq.title">Questions?</h2>
         <p class="ornament text-sage">♥</p>
       </div>
 
       <!-- Logistics -->
-      <h3 class="text-lg sm:text-xl font-serif text-sage-light mb-4">Logistics</h3>
+      <h3 class="text-lg sm:text-xl font-serif text-sage-light mb-4" data-i18n="faq.logistics">Logistics</h3>
       <div class="space-y-3 sm:space-y-4 mb-8">
         <details class="bg-darker rounded-lg shadow-sm border border-sage/20">
           <summary
-            class="px-4 sm:px-6 py-3 sm:py-4 cursor-pointer font-medium text-white hover:text-sage transition-colors text-sm sm:text-base">
+            class="px-4 sm:px-6 py-3 sm:py-4 cursor-pointer font-medium text-white hover:text-sage transition-colors text-sm sm:text-base"
+            data-i18n="faq.q1">
             What time should I arrive?
           </summary>
-          <div class="px-4 sm:px-6 pb-3 sm:pb-4 text-white/70 text-sm sm:text-base">
+          <div class="px-4 sm:px-6 pb-3 sm:pb-4 text-white/70 text-sm sm:text-base" data-i18n="faq.a1">
             Please arrive by 4:30 to ensure that everyone is seated and ready for the ceremony to commence at 5:00 pm.
           </div>
         </details>
 
         <details class="bg-darker rounded-lg shadow-sm border border-sage/20">
           <summary
-            class="px-4 sm:px-6 py-3 sm:py-4 cursor-pointer font-medium text-white hover:text-sage transition-colors text-sm sm:text-base">
+            class="px-4 sm:px-6 py-3 sm:py-4 cursor-pointer font-medium text-white hover:text-sage transition-colors text-sm sm:text-base"
+            data-i18n="faq.q2">
             Where do I park?
           </summary>
-          <div class="px-4 sm:px-6 pb-3 sm:pb-4 text-white/70 text-sm sm:text-base">
+          <div class="px-4 sm:px-6 pb-3 sm:pb-4 text-white/70 text-sm sm:text-base" data-i18n="faq.a2">
             There is adequate parking at the venue and there will be a worker present to assist you with parking
             instructions upon arrival.
           </div>
@@ -448,10 +491,11 @@
 
         <details class="bg-darker rounded-lg shadow-sm border border-sage/20">
           <summary
-            class="px-4 sm:px-6 py-3 sm:py-4 cursor-pointer font-medium text-white hover:text-sage transition-colors text-sm sm:text-base">
+            class="px-4 sm:px-6 py-3 sm:py-4 cursor-pointer font-medium text-white hover:text-sage transition-colors text-sm sm:text-base"
+            data-i18n="faq.q3">
             Is the venue wheelchair accessible?
           </summary>
-          <div class="px-4 sm:px-6 pb-3 sm:pb-4 text-white/70 text-sm sm:text-base">
+          <div class="px-4 sm:px-6 pb-3 sm:pb-4 text-white/70 text-sm sm:text-base" data-i18n="faq.a3">
             The venue is wheelchair accessible. If assistance is needed to accommodate a handicap please message Elio
             and Juscelia to coordinate.
           </div>
@@ -459,24 +503,26 @@
 
         <details class="bg-darker rounded-lg shadow-sm border border-sage/20">
           <summary
-            class="px-4 sm:px-6 py-3 sm:py-4 cursor-pointer font-medium text-white hover:text-sage transition-colors text-sm sm:text-base">
+            class="px-4 sm:px-6 py-3 sm:py-4 cursor-pointer font-medium text-white hover:text-sage transition-colors text-sm sm:text-base"
+            data-i18n="faq.q4">
             Will there be transportation between ceremony and reception?
           </summary>
-          <div class="px-4 sm:px-6 pb-3 sm:pb-4 text-white/70 text-sm sm:text-base">
+          <div class="px-4 sm:px-6 pb-3 sm:pb-4 text-white/70 text-sm sm:text-base" data-i18n="faq.a4">
             The ceremony, cocktail hour, and reception are at the same location and will not require transportation.
           </div>
         </details>
       </div>
 
       <!-- Dress Code -->
-      <h3 class="text-lg sm:text-xl font-serif text-sage-light mb-4">Dress Code</h3>
+      <h3 class="text-lg sm:text-xl font-serif text-sage-light mb-4" data-i18n="faq.dresscode">Dress Code</h3>
       <div class="space-y-3 sm:space-y-4 mb-8">
         <details class="bg-darker rounded-lg shadow-sm border border-sage/20">
           <summary
-            class="px-4 sm:px-6 py-3 sm:py-4 cursor-pointer font-medium text-white hover:text-sage transition-colors text-sm sm:text-base">
+            class="px-4 sm:px-6 py-3 sm:py-4 cursor-pointer font-medium text-white hover:text-sage transition-colors text-sm sm:text-base"
+            data-i18n="faq.q5">
             What should I wear?
           </summary>
-          <div class="px-4 sm:px-6 pb-3 sm:pb-4 text-white/70 text-sm sm:text-base">
+          <div class="px-4 sm:px-6 pb-3 sm:pb-4 text-white/70 text-sm sm:text-base" data-i18n="faq.a5">
             The dress code will be Black Formal/Cocktail attire for all guests. Men wearing a black suit jacket may also
             wear a white undershirt. Please ensure all guests attending dress accordingly.
           </div>
@@ -484,34 +530,37 @@
 
         <details class="bg-darker rounded-lg shadow-sm border border-sage/20">
           <summary
-            class="px-4 sm:px-6 py-3 sm:py-4 cursor-pointer font-medium text-white hover:text-sage transition-colors text-sm sm:text-base">
+            class="px-4 sm:px-6 py-3 sm:py-4 cursor-pointer font-medium text-white hover:text-sage transition-colors text-sm sm:text-base"
+            data-i18n="faq.q6">
             Is it outdoors? Should I bring layers or wear certain shoes?
           </summary>
-          <div class="px-4 sm:px-6 pb-3 sm:pb-4 text-white/70 text-sm sm:text-base">
+          <div class="px-4 sm:px-6 pb-3 sm:pb-4 text-white/70 text-sm sm:text-base" data-i18n="faq.a6">
             Ceremony and cocktail hour will both be outdoor. We recommend dressing appropriately for the weather.
           </div>
         </details>
       </div>
 
       <!-- Guests & Plus-Ones -->
-      <h3 class="text-lg sm:text-xl font-serif text-sage-light mb-4">Guests & Plus-Ones</h3>
+      <h3 class="text-lg sm:text-xl font-serif text-sage-light mb-4" data-i18n="faq.guests">Guests & Plus-Ones</h3>
       <div class="space-y-3 sm:space-y-4 mb-8">
         <details class="bg-darker rounded-lg shadow-sm border border-sage/20">
           <summary
-            class="px-4 sm:px-6 py-3 sm:py-4 cursor-pointer font-medium text-white hover:text-sage transition-colors text-sm sm:text-base">
+            class="px-4 sm:px-6 py-3 sm:py-4 cursor-pointer font-medium text-white hover:text-sage transition-colors text-sm sm:text-base"
+            data-i18n="faq.q7">
             Can I bring a date?
           </summary>
-          <div class="px-4 sm:px-6 pb-3 sm:pb-4 text-white/70 text-sm sm:text-base">
+          <div class="px-4 sm:px-6 pb-3 sm:pb-4 text-white/70 text-sm sm:text-base" data-i18n="faq.a7">
             Only dates that are on the guest list.
           </div>
         </details>
 
         <details class="bg-darker rounded-lg shadow-sm border border-sage/20">
           <summary
-            class="px-4 sm:px-6 py-3 sm:py-4 cursor-pointer font-medium text-white hover:text-sage transition-colors text-sm sm:text-base">
+            class="px-4 sm:px-6 py-3 sm:py-4 cursor-pointer font-medium text-white hover:text-sage transition-colors text-sm sm:text-base"
+            data-i18n="faq.q8">
             Are children welcome?
           </summary>
-          <div class="px-4 sm:px-6 pb-3 sm:pb-4 text-white/70 text-sm sm:text-base">
+          <div class="px-4 sm:px-6 pb-3 sm:pb-4 text-white/70 text-sm sm:text-base" data-i18n="faq.a8">
             To allow all wedding guests a night of relaxation and celebration, we respectfully ask that no children
             attend the event. If you require bringing children to attend please mention beforehand to Elio and Juscelia
             to accommodate.
@@ -520,24 +569,26 @@
 
         <details class="bg-darker rounded-lg shadow-sm border border-sage/20">
           <summary
-            class="px-4 sm:px-6 py-3 sm:py-4 cursor-pointer font-medium text-white hover:text-sage transition-colors text-sm sm:text-base">
+            class="px-4 sm:px-6 py-3 sm:py-4 cursor-pointer font-medium text-white hover:text-sage transition-colors text-sm sm:text-base"
+            data-i18n="faq.q9">
             Can I bring a guest not listed on my invitation?
           </summary>
-          <div class="px-4 sm:px-6 pb-3 sm:pb-4 text-white/70 text-sm sm:text-base">
+          <div class="px-4 sm:px-6 pb-3 sm:pb-4 text-white/70 text-sm sm:text-base" data-i18n="faq.a9">
             No, if there is a change in who the guest attending with you is please inform Elio and Juscelia prior.
           </div>
         </details>
       </div>
 
       <!-- Food & Drink -->
-      <h3 class="text-lg sm:text-xl font-serif text-sage-light mb-4">Food & Drink</h3>
+      <h3 class="text-lg sm:text-xl font-serif text-sage-light mb-4" data-i18n="faq.food">Food & Drink</h3>
       <div class="space-y-3 sm:space-y-4 mb-8">
         <details class="bg-darker rounded-lg shadow-sm border border-sage/20">
           <summary
-            class="px-4 sm:px-6 py-3 sm:py-4 cursor-pointer font-medium text-white hover:text-sage transition-colors text-sm sm:text-base">
+            class="px-4 sm:px-6 py-3 sm:py-4 cursor-pointer font-medium text-white hover:text-sage transition-colors text-sm sm:text-base"
+            data-i18n="faq.q10">
             Will there be vegetarian/vegan options?
           </summary>
-          <div class="px-4 sm:px-6 pb-3 sm:pb-4 text-white/70 text-sm sm:text-base">
+          <div class="px-4 sm:px-6 pb-3 sm:pb-4 text-white/70 text-sm sm:text-base" data-i18n="faq.a10">
             Yes, please let Elio and Juscelia know at least 2 weeks prior to the wedding to ensure accommodations could
             be met for a vegetarian/vegan option.
           </div>
@@ -545,20 +596,22 @@
 
         <details class="bg-darker rounded-lg shadow-sm border border-sage/20">
           <summary
-            class="px-4 sm:px-6 py-3 sm:py-4 cursor-pointer font-medium text-white hover:text-sage transition-colors text-sm sm:text-base">
+            class="px-4 sm:px-6 py-3 sm:py-4 cursor-pointer font-medium text-white hover:text-sage transition-colors text-sm sm:text-base"
+            data-i18n="faq.q11">
             Is there an open bar?
           </summary>
-          <div class="px-4 sm:px-6 pb-3 sm:pb-4 text-white/70 text-sm sm:text-base">
+          <div class="px-4 sm:px-6 pb-3 sm:pb-4 text-white/70 text-sm sm:text-base" data-i18n="faq.a11">
             No, cash and card could be used at the venue to purchase beverages.
           </div>
         </details>
 
         <details class="bg-darker rounded-lg shadow-sm border border-sage/20">
           <summary
-            class="px-4 sm:px-6 py-3 sm:py-4 cursor-pointer font-medium text-white hover:text-sage transition-colors text-sm sm:text-base">
+            class="px-4 sm:px-6 py-3 sm:py-4 cursor-pointer font-medium text-white hover:text-sage transition-colors text-sm sm:text-base"
+            data-i18n="faq.q12">
             Can you accommodate allergies?
           </summary>
-          <div class="px-4 sm:px-6 pb-3 sm:pb-4 text-white/70 text-sm sm:text-base">
+          <div class="px-4 sm:px-6 pb-3 sm:pb-4 text-white/70 text-sm sm:text-base" data-i18n="faq.a12">
             Yes, please let Elio and Juscelia know at least 2 weeks prior to the wedding with the specific allergy to
             accommodate for.
           </div>
@@ -566,10 +619,11 @@
 
         <details class="bg-darker rounded-lg shadow-sm border border-sage/20">
           <summary
-            class="px-4 sm:px-6 py-3 sm:py-4 cursor-pointer font-medium text-white hover:text-sage transition-colors text-sm sm:text-base">
+            class="px-4 sm:px-6 py-3 sm:py-4 cursor-pointer font-medium text-white hover:text-sage transition-colors text-sm sm:text-base"
+            data-i18n="faq.q13">
             Can I bring a gift to the venue?
           </summary>
-          <div class="px-4 sm:px-6 pb-3 sm:pb-4 text-white/70 text-sm sm:text-base">
+          <div class="px-4 sm:px-6 pb-3 sm:pb-4 text-white/70 text-sm sm:text-base" data-i18n="faq.a13">
             Absolutely, guests are welcome to bring gifts to the venue. While your presence is truly the greatest gift
             to us, for those who wish to contribute in another way, we would be sincerely grateful for any support
             toward our honeymoon. These contributions will help us create lasting memories as we begin this next chapter
@@ -580,14 +634,15 @@
       </div>
 
       <!-- Photos & Social -->
-      <h3 class="text-lg sm:text-xl font-serif text-sage-light mb-4">Photos & Social</h3>
+      <h3 class="text-lg sm:text-xl font-serif text-sage-light mb-4" data-i18n="faq.photos">Photos & Social</h3>
       <div class="space-y-3 sm:space-y-4 mb-8">
         <details class="bg-darker rounded-lg shadow-sm border border-sage/20">
           <summary
-            class="px-4 sm:px-6 py-3 sm:py-4 cursor-pointer font-medium text-white hover:text-sage transition-colors text-sm sm:text-base">
+            class="px-4 sm:px-6 py-3 sm:py-4 cursor-pointer font-medium text-white hover:text-sage transition-colors text-sm sm:text-base"
+            data-i18n="faq.q14">
             Is this an unplugged ceremony?
           </summary>
-          <div class="px-4 sm:px-6 pb-3 sm:pb-4 text-white/70 text-sm sm:text-base">
+          <div class="px-4 sm:px-6 pb-3 sm:pb-4 text-white/70 text-sm sm:text-base" data-i18n="faq.a14">
             Feel free to record during the ceremony, as long as you are not obstructing the view for other guests
             present.
           </div>
@@ -595,7 +650,8 @@
 
         <details class="bg-darker rounded-lg shadow-sm border border-sage/20">
           <summary
-            class="px-4 sm:px-6 py-3 sm:py-4 cursor-pointer font-medium text-white hover:text-sage transition-colors text-sm sm:text-base">
+            class="px-4 sm:px-6 py-3 sm:py-4 cursor-pointer font-medium text-white hover:text-sage transition-colors text-sm sm:text-base"
+            data-i18n="faq.q15">
             What's the wedding hashtag?
           </summary>
           <div class="px-4 sm:px-6 pb-3 sm:pb-4 text-white/70 text-sm sm:text-base">
@@ -605,8 +661,8 @@
       </div>
 
       <div class="text-center mt-8 sm:mt-12">
-        <p class="text-white/70 text-sm sm:text-base">Still have questions?</p>
-        <p class="text-white/70 text-sm sm:text-base">Contact Elio or Juscelia directly</p>
+        <p class="text-white/70 text-sm sm:text-base" data-i18n="faq.still">Still have questions?</p>
+        <p class="text-white/70 text-sm sm:text-base" data-i18n="faq.contact">Contact Elio or Juscelia directly</p>
       </div>
     </div>
   </section>
@@ -617,15 +673,15 @@
       <h2 class="text-2xl sm:text-3xl font-serif mb-4 text-sage-light">Elio & Juscelia</h2>
       <p class="text-white/60 mb-6 text-sm sm:text-base">The Hacienda • Phillipston, MA</p>
       <div class="w-20 h-0.5 bg-sage-light mx-auto mb-6"></div>
-      <p class="text-white/40 text-xs sm:text-sm">Made with love</p>
+      <p class="text-white/40 text-xs sm:text-sm" data-i18n="footer.made">Made with love</p>
     </div>
   </footer>
 
   <!-- Video Modal -->
-  <div id="video-modal" class="fixed inset-0 z-[100] hidden items-center justify-center bg-black/90 backdrop-blur-sm p-4">
+  <div id="video-modal"
+    class="fixed inset-0 z-[100] hidden items-center justify-center bg-black/90 backdrop-blur-sm p-4">
     <div class="relative w-full max-w-2xl">
-      <button id="close-video-modal"
-        class="absolute -top-12 right-0 text-white/70 hover:text-white transition-colors">
+      <button id="close-video-modal" class="absolute -top-12 right-0 text-white/70 hover:text-white transition-colors">
         <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
         </svg>

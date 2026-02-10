@@ -1,4 +1,8 @@
 import './style.css'
+import { initI18n } from './i18n.js'
+
+// Initialize language system
+initI18n()
 
 // Video modal
 const openVideoBtn = document.getElementById('open-video-modal')
