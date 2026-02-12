@@ -68,7 +68,9 @@ const translations = {
     'gifts.title': 'Gifts',
     'gifts.intro': 'Your presence at our wedding is truly the greatest gift to us. For those who wish to contribute in another way, we would be sincerely grateful for any support toward our honeymoon. These contributions will help us create lasting memories as we begin this next chapter together.',
     'gifts.honeymoon': 'Honeymoon Fund',
-    'gifts.honeymoon.sub': 'Help us make memories',
+    'gifts.venmo': 'Venmo',
+    'gifts.cashapp': 'Cash App',
+    'gifts.applepay': 'Apple Pay',
     'gifts.note': 'Gifts are also welcome at the venue on the day of the wedding.',
 
     // FAQ
@@ -181,7 +183,9 @@ const translations = {
     'gifts.title': 'Presentes',
     'gifts.intro': 'Sua presença em nosso casamento é verdadeiramente o maior presente para nós. Para aqueles que desejam contribuir de outra forma, ficaríamos sinceramente gratos por qualquer apoio para nossa lua de mel. Essas contribuições nos ajudarão a criar memórias duradouras enquanto começamos este novo capítulo juntos.',
     'gifts.honeymoon': 'Lua de Mel',
-    'gifts.honeymoon.sub': 'Nos ajude a criar memórias',
+    'gifts.venmo': 'Venmo',
+    'gifts.cashapp': 'Cash App',
+    'gifts.applepay': 'Apple Pay',
     'gifts.note': 'Presentes também são bem-vindos no local no dia do casamento.',
 
     // FAQ
