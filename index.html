@@ -379,44 +379,42 @@
         Please let us know if you'll be joining us on our special day.
       </p>
 
-      <form class="space-y-6 text-left">
+      <form id="rsvp-form" class="space-y-6 text-left">
         <div>
           <label class="block text-sm font-medium text-white mb-2" data-i18n="rsvp.name">Full Name</label>
-          <input type="text"
+          <input type="text" name="entry.798703675" required
             class="w-full px-4 py-3 border border-sage/30 rounded-lg focus:outline-none focus:border-sage focus:ring-1 focus:ring-sage/50 bg-darker text-white placeholder:text-white/50"
             placeholder="Your name" data-i18n-placeholder="rsvp.name.placeholder" />
         </div>
         <div>
-          <label class="block text-sm font-medium text-white mb-2" data-i18n="rsvp.email">Email</label>
-          <input type="email"
-            class="w-full px-4 py-3 border border-sage/30 rounded-lg focus:outline-none focus:border-sage focus:ring-1 focus:ring-sage/50 bg-darker text-white placeholder:text-white/50"
-            placeholder="your@email.com" />
-        </div>
-        <div>
-          <label class="block text-sm font-medium text-white mb-2" data-i18n="rsvp.attend">Will you attend?</label>
-          <select
+          <label class="block text-sm font-medium text-white mb-2" data-i18n="rsvp.attend">Can you attend?</label>
+          <select name="entry.877086558"
             class="w-full px-4 py-3 border border-sage/30 rounded-lg focus:outline-none focus:border-sage focus:ring-1 focus:ring-sage/50 bg-darker text-white placeholder:text-white/50">
-            <option data-i18n="rsvp.accept">Joyfully Accept</option>
-            <option data-i18n="rsvp.decline">Regretfully Decline</option>
+            <option value="Yes,  I'll be there" data-i18n="rsvp.accept">Joyfully Accept</option>
+            <option value="Sorry, can't make it" data-i18n="rsvp.decline">Regretfully Decline</option>
           </select>
         </div>
         <div>
-          <label class="block text-sm font-medium text-white mb-2" data-i18n="rsvp.guests">Number of Guests</label>
-          <select
-            class="w-full px-4 py-3 border border-sage/30 rounded-lg focus:outline-none focus:border-sage focus:ring-1 focus:ring-sage/50 bg-darker text-white placeholder:text-white/50">
-            <option>1</option>
-            <option>2</option>
-            <option>3</option>
-            <option>4</option>
-          </select>
+          <label class="block text-sm font-medium text-white mb-2" data-i18n="rsvp.guests">How many guests will be attending?</label>
+          <input type="number" name="entry.1146276707" min="1" max="10" value="1" required
+            class="w-full px-4 py-3 border border-sage/30 rounded-lg focus:outline-none focus:border-sage focus:ring-1 focus:ring-sage/50 bg-darker text-white placeholder:text-white/50" />
         </div>
         <div>
-          <label class="block text-sm font-medium text-white mb-2" data-i18n="rsvp.dietary">Dietary Restrictions</label>
-          <textarea
+          <label class="block text-sm font-medium text-white mb-2" data-i18n="rsvp.names">Names of people attending</label>
+          <textarea name="entry.1498135098" required
             class="w-full px-4 py-3 border border-sage/30 rounded-lg focus:outline-none focus:border-sage focus:ring-1 focus:ring-sage/50 bg-darker text-white placeholder:text-white/50 h-24"
-            placeholder="Any dietary restrictions or allergies..."
-            data-i18n-placeholder="rsvp.dietary.placeholder"></textarea>
+            placeholder="List the names of all guests attending..."
+            data-i18n-placeholder="rsvp.names.placeholder"></textarea>
         </div>
+        <div>
+          <label class="block text-sm font-medium text-white mb-2" data-i18n="rsvp.comments">Comments or questions</label>
+          <textarea name="entry.2606285"
+            class="w-full px-4 py-3 border border-sage/30 rounded-lg focus:outline-none focus:border-sage focus:ring-1 focus:ring-sage/50 bg-darker text-white placeholder:text-white/50 h-24"
+            placeholder="Any comments or questions..."
+            data-i18n-placeholder="rsvp.comments.placeholder"></textarea>
+        </div>
+        <input type="hidden" name="fvv" value="1">
+        <input type="hidden" name="pageHistory" value="0">
         <button type="submit"
           class="w-full py-4 bg-sage hover:bg-sage-dark text-white font-medium tracking-wide uppercase rounded-lg transition-colors"
           data-i18n="rsvp.submit">

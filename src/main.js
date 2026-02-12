@@ -92,6 +92,36 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   })
 })
 
+// RSVP form submission to Google Forms
+const rsvpForm = document.getElementById('rsvp-form')
+if (rsvpForm) {
+  rsvpForm.addEventListener('submit', (e) => {
+    e.preventDefault()
+    const submitBtn = rsvpForm.querySelector('button[type="submit"]')
+    const originalText = submitBtn.textContent
+    submitBtn.disabled = true
+    submitBtn.textContent = '...'
+
+    const params = new URLSearchParams(new FormData(rsvpForm))
+    const url = 'https://docs.google.com/forms/d/e/1FAIpQLSeoj-RCwc8Iv1KxPJpnyl7SYlm1OPh1vIQtYzXk9oJOYstVLw/formResponse?' + params.toString()
+
+    const img = new Image()
+    img.onload = img.onerror = () => {
+      submitBtn.textContent = document.documentElement.lang === 'pt' ? 'Enviado!' : 'Sent!'
+      submitBtn.classList.remove('bg-sage', 'hover:bg-sage-dark')
+      submitBtn.classList.add('bg-green-700')
+      rsvpForm.reset()
+      setTimeout(() => {
+        submitBtn.textContent = originalText
+        submitBtn.classList.remove('bg-green-700')
+        submitBtn.classList.add('bg-sage', 'hover:bg-sage-dark')
+        submitBtn.disabled = false
+      }, 3000)
+    }
+    img.src = url
+  })
+}
+
 // Fade in elements on scroll
 if ('IntersectionObserver' in window) {
   const observerOptions = {
