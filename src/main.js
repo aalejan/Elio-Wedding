@@ -46,6 +46,41 @@ if (openVideoBtn && videoModal) {
   })
 }
 
+// Zelle modal
+const openZelleBtn = document.getElementById('open-zelle-modal')
+const closeZelleBtn = document.getElementById('close-zelle-modal')
+const zelleModal = document.getElementById('zelle-modal')
+
+if (openZelleBtn && zelleModal) {
+  openZelleBtn.addEventListener('click', () => {
+    zelleModal.classList.remove('hidden')
+    zelleModal.classList.add('flex')
+    document.body.style.overflow = 'hidden'
+  })
+
+  closeZelleBtn.addEventListener('click', () => {
+    zelleModal.classList.add('hidden')
+    zelleModal.classList.remove('flex')
+    document.body.style.overflow = ''
+  })
+
+  zelleModal.addEventListener('click', (e) => {
+    if (e.target === zelleModal) {
+      zelleModal.classList.add('hidden')
+      zelleModal.classList.remove('flex')
+      document.body.style.overflow = ''
+    }
+  })
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && !zelleModal.classList.contains('hidden')) {
+      zelleModal.classList.add('hidden')
+      zelleModal.classList.remove('flex')
+      document.body.style.overflow = ''
+    }
+  })
+}
+
 // Mobile menu toggle
 const mobileMenuBtn = document.getElementById('mobile-menu-btn')
 const mobileMenu = document.getElementById('mobile-menu')

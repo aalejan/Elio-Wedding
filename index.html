@@ -439,7 +439,7 @@
 
       <p class="text-lg sm:text-xl font-serif text-white mb-6 sm:mb-8" data-i18n="gifts.honeymoon">Honeymoon Fund</p>
 
-      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 max-w-3xl mx-auto">
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6 max-w-4xl mx-auto">
         <!-- Venmo -->
         <a href="https://venmo.com/u/Elio-Rodriquez" target="_blank" rel="noopener noreferrer"
           class="bg-darker rounded-lg p-6 border border-sage/30 hover:border-sage/60 transition-colors group">
@@ -474,6 +474,18 @@
           <p class="text-white font-medium" data-i18n="gifts.applepay">Apple Pay</p>
           <p class="text-sm text-white/50 mt-1">978-235-3725</p>
         </div>
+
+        <!-- Zelle -->
+        <button id="open-zelle-modal"
+          class="bg-darker rounded-lg p-6 border border-sage/30 hover:border-sage/60 transition-colors cursor-pointer">
+          <div class="w-12 h-12 mx-auto mb-3 flex items-center justify-center">
+            <svg class="w-8 h-8 text-sage" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M13.559 24h-2.841c-.971 0-1.339-.782-1.339-1.339V15.15H4.2c-.558 0-1.339-.368-1.339-1.339v-2.841c0-.558.368-1.339 1.339-1.339h5.179V4.452L4.2 12.011c-.368.368-.971.368-1.339 0L1.522 10.672c-.368-.368-.368-.971 0-1.339L11.138.717c.368-.368.971-.368 1.339 0l9.616 8.616c.368.368.368.971 0 1.339L20.754 12.011c-.368.368-.971.368-1.339 0l-5.179-7.559v5.179H19.8c.558 0 1.339.368 1.339 1.339v2.841c0 .558-.368 1.339-1.339 1.339h-5.564v7.511c0 .558-.368 1.339-1.339 1.339z"/>
+            </svg>
+          </div>
+          <p class="text-white font-medium" data-i18n="gifts.zelle">Zelle</p>
+          <p class="text-sm text-white/50 mt-1" data-i18n="gifts.zelle.tap">Tap to view</p>
+        </button>
       </div>
 
       <p class="text-white/60 text-sm mt-8" data-i18n="gifts.note">
@@ -703,6 +715,21 @@
       <p class="text-white/40 text-xs sm:text-sm" data-i18n="footer.made">Made with love</p>
     </div>
   </footer>
+
+  <!-- Zelle Modal -->
+  <div id="zelle-modal"
+    class="fixed inset-0 z-[100] hidden items-center justify-center bg-black/90 backdrop-blur-sm p-4">
+    <div class="relative w-full max-w-sm">
+      <button id="close-zelle-modal" class="absolute -top-12 right-0 text-white/70 hover:text-white transition-colors">
+        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+      <div class="rounded-xl overflow-hidden shadow-2xl ring-2 ring-sage/30 bg-white">
+        <img src="./src/images/elio-zelle.png" alt="Zelle QR Code" class="w-full" />
+      </div>
+    </div>
+  </div>
 
   <!-- Video Modal -->
   <div id="video-modal"

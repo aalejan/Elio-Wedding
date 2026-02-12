@@ -72,6 +72,8 @@ const translations = {
     'gifts.venmo': 'Venmo',
     'gifts.cashapp': 'Cash App',
     'gifts.applepay': 'Apple Pay',
+    'gifts.zelle': 'Zelle',
+    'gifts.zelle.tap': 'Tap to view',
     'gifts.note': 'Gifts are also welcome at the venue on the day of the wedding.',
 
     // FAQ
@@ -188,6 +190,8 @@ const translations = {
     'gifts.venmo': 'Venmo',
     'gifts.cashapp': 'Cash App',
     'gifts.applepay': 'Apple Pay',
+    'gifts.zelle': 'Zelle',
+    'gifts.zelle.tap': 'Toque para ver',
     'gifts.note': 'Presentes também são bem-vindos no local no dia do casamento.',
 
     // FAQ
