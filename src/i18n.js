@@ -11,6 +11,7 @@ const translations = {
 
     // Hero
     'hero.tagline': "We're Getting Married",
+    'hero.date': 'May 30, 2026',
 
     // Our Story
     'story.title': 'Our Story',
@@ -36,8 +37,9 @@ const translations = {
 
     // Details
     'details.title': 'Wedding Details',
+    'details.date': 'May 30, 2026',
     'details.ceremony': 'Ceremony',
-    'details.ceremony.note': 'Please be seated by 5:00 PM',
+    'details.ceremony.note': 'Please be seated by 4:30 PM',
     'details.cocktail': 'Cocktail Hour',
     'details.cocktail.note': "Drinks & hors d'oeuvres",
     'details.reception': 'Reception',
@@ -80,7 +82,7 @@ const translations = {
     'faq.title': 'Questions?',
     'faq.logistics': 'Logistics',
     'faq.q1': 'What time should I arrive?',
-    'faq.a1': 'Please arrive by 4:30 to ensure that everyone is seated and ready for the ceremony to commence at 5:00 pm.',
+    'faq.a1': 'Please arrive by 4:30 PM to ensure that everyone is seated and ready for the ceremony to commence at 5:00 PM.',
     'faq.q2': 'Where do I park?',
     'faq.a2': 'There is adequate parking at the venue and there will be a worker present to assist you with parking instructions upon arrival.',
     'faq.q3': 'Is the venue wheelchair accessible?',
@@ -129,6 +131,7 @@ const translations = {
 
     // Hero
     'hero.tagline': 'Vamos Nos Casar',
+    'hero.date': '30 de Maio, 2026',
 
     // Our Story
     'story.title': 'Nossa História',
@@ -154,8 +157,9 @@ const translations = {
 
     // Details
     'details.title': 'Detalhes do Casamento',
+    'details.date': '30 de Maio, 2026',
     'details.ceremony': 'Cerimônia',
-    'details.ceremony.note': 'Por favor, estejam sentados até 17:00',
+    'details.ceremony.note': 'Por favor, estejam sentados até 16:30',
     'details.cocktail': 'Coquetel',
     'details.cocktail.note': 'Bebidas e aperitivos',
     'details.reception': 'Recepção',
